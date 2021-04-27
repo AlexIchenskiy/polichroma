@@ -1,9 +1,13 @@
 import './App.css';
 
-import { Button, Card, Divider } from 'ui-neumorphism'
+import React, { useState } from 'react';
+
+import { Button, Card, Dialog, Divider, Fab } from 'ui-neumorphism'
 import 'ui-neumorphism/dist/index.css'
 
 function App() {
+  const [visible, setVisible] = useState(false);
+
   return (
     <Card className="App" elevation={2}>
       <Card style={{ borderRadius: '8px 8px 0 0'}}>
@@ -17,10 +21,13 @@ function App() {
               <li><Button className="Color-changeable Animate-shadow-button">Sign up</Button></li>
             </ul>
           </nav>
+          <Fab className="Burger-menu" onClick={() => setVisible(true)}>
+              <span className="Color-changeable">&#9776;</span>
+          </Fab>
         </header>
       </Card>
       <section className="App-body">
-        <section class="App-body-left">
+        <section className="App-body-left">
           <p className="App-body-title">Fast and easy neumorphic <b className="Color-changeable">color</b> palettes generator!</p>
           <p className="App-body-subtitle">Create and export perfect palette for your art project easily.</p>
           <Button className="App-body-button Color-changeable" style={{height:'55px'}}>
@@ -30,9 +37,17 @@ function App() {
             <h1 style={{fontSize: '18px'}}>Explore!</h1>
           </Button>
         </section>
-        <section class="App-body-right">
+        <section className="App-body-right">
         </section>
       </section>
+      <Dialog onClose={() => setVisible(false)} visible={visible}>
+        <Card  className='Modal-nav'>
+          <Button text>Generate</Button>
+          <Button text>Sign in</Button>
+          <Button className="Color-changeable">Sign up</Button>
+          <Button onClick={() => setVisible(false)}>Close</Button>
+        </Card>
+      </Dialog>
     </Card>
   );
 }

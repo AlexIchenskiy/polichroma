@@ -4,6 +4,7 @@
 }
 
 .App {
+  width: auto;
   margin: 1%;
 }
 
@@ -81,6 +82,43 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.Modal-nav-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e4ebf5;
+  opacity: 0.96;
+}
+
+.Modal-nav {
+  width: 225px!important;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Modal-nav > * {
+  margin: 5% 2%;
+  width: 100px;
+}
+
+.Modal-closed {
+  display: none;
+}
+
+.Burger-menu {
+  visibility: hidden;
+  position: absolute;
+}
+
 .Color-changeable {
   animation: color-change 60s infinite;
 }
@@ -103,6 +141,22 @@
     grid-template-areas:
       "App-body-left",
       "App-body-right";
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App-header {
+    padding: 2% 5%;
+  }
+
+  .Nav-header {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .Burger-menu {
+    visibility: initial;
+    position: initial;
   }
 }
 
