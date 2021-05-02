@@ -119,6 +119,21 @@
   position: absolute;
 }
 
+.App-body-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Color-picker-outer {
+  width: 350px!important;
+  height: 350px!important;
+  border-radius: 175px!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Color-changeable {
   animation: color-change 60s infinite;
 }
@@ -135,12 +150,16 @@
   .App-body { 
     padding: 2%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     gap: 0px 0px;
     grid-template-areas:
-      "App-body-left",
+      "App-body-left"
       "App-body-right";
+  }
+
+  .App-body-right {
+    margin: 10% 0;
   }
 }
 
@@ -157,6 +176,15 @@
   .Burger-menu {
     visibility: initial;
     position: initial;
+  }
+
+  .Color-picker-outer {
+    width: 300px!important;
+    height: 300px!important;
+    border-radius: 150px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

@@ -5,8 +5,27 @@ import React, { useState } from 'react';
 import { Button, Card, Dialog, Divider, Fab } from 'ui-neumorphism'
 import 'ui-neumorphism/dist/index.css'
 
+import ColorPicker from '@radial-color-picker/react-color-picker';
+import '@radial-color-picker/react-color-picker/dist/react-color-picker.min.css';
+
 function App() {
   const [visible, setVisible] = useState(false);
+
+  const [color, setColor] = React.useState({
+    hue: 90,
+    saturation: 100,
+    luminosity: 50,
+    alpha: 1,
+  });
+
+  const onInput = hue => {
+    setColor(prev => {
+      return {
+        ...prev,
+        hue,
+      };
+    });
+  };
 
   return (
     <Card className="App" elevation={2}>
@@ -38,6 +57,9 @@ function App() {
           </Button>
         </section>
         <section className="App-body-right">
+          <Card className="Color-picker-outer" elevation={2}>
+            <ColorPicker {...color} onInput={onInput} />
+          </Card>
         </section>
       </section>
       <Dialog onClose={() => setVisible(false)} visible={visible}>
