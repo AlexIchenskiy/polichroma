@@ -58,7 +58,8 @@ function App() {
         </section>
         <section className="App-body-right">
           <Card className="Color-picker-outer" elevation={2}>
-            <ColorPicker {...color} onInput={onInput} />
+            <Card className="Color-picker-inner" elevation={2}></Card>
+            <ColorPicker {...color} onInput={onInput} variant={'persistent'} />
           </Card>
         </section>
       </section>
