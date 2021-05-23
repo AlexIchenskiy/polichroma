@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/polichroma/static/css/main.9bc2b5b4.chunk.css",
-    "main.js": "/polichroma/static/js/main.f78c059f.chunk.js",
-    "main.js.map": "/polichroma/static/js/main.f78c059f.chunk.js.map",
+    "main.js": "/polichroma/static/js/main.7988d8d2.chunk.js",
+    "main.js.map": "/polichroma/static/js/main.7988d8d2.chunk.js.map",
     "runtime-main.js": "/polichroma/static/js/runtime-main.b5bfba8a.js",
     "runtime-main.js.map": "/polichroma/static/js/runtime-main.b5bfba8a.js.map",
     "static/css/2.ed18cded.chunk.css": "/polichroma/static/css/2.ed18cded.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.ed18cded.chunk.css",
     "static/js/2.8e326a91.chunk.js",
     "static/css/main.9bc2b5b4.chunk.css",
-    "static/js/main.f78c059f.chunk.js"
+    "static/js/main.7988d8d2.chunk.js"
   ]
 }
