@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/polichroma/static/css/main.9bc2b5b4.chunk.css",
-    "main.js": "/polichroma/static/js/main.7988d8d2.chunk.js",
-    "main.js.map": "/polichroma/static/js/main.7988d8d2.chunk.js.map",
-    "runtime-main.js": "/polichroma/static/js/runtime-main.b5bfba8a.js",
-    "runtime-main.js.map": "/polichroma/static/js/runtime-main.b5bfba8a.js.map",
-    "static/css/2.ed18cded.chunk.css": "/polichroma/static/css/2.ed18cded.chunk.css",
-    "static/js/2.8e326a91.chunk.js": "/polichroma/static/js/2.8e326a91.chunk.js",
-    "static/js/2.8e326a91.chunk.js.map": "/polichroma/static/js/2.8e326a91.chunk.js.map",
-    "static/js/3.725b9cf2.chunk.js": "/polichroma/static/js/3.725b9cf2.chunk.js",
-    "static/js/3.725b9cf2.chunk.js.map": "/polichroma/static/js/3.725b9cf2.chunk.js.map",
+    "main.css": "/polichroma/static/css/main.0e975e33.chunk.css",
+    "main.js": "/polichroma/static/js/main.e7439b36.chunk.js",
+    "main.js.map": "/polichroma/static/js/main.e7439b36.chunk.js.map",
+    "runtime-main.js": "/polichroma/static/js/runtime-main.cb127696.js",
+    "runtime-main.js.map": "/polichroma/static/js/runtime-main.cb127696.js.map",
+    "static/css/2.e7921d76.chunk.css": "/polichroma/static/css/2.e7921d76.chunk.css",
+    "static/js/2.505be654.chunk.js": "/polichroma/static/js/2.505be654.chunk.js",
+    "static/js/2.505be654.chunk.js.map": "/polichroma/static/js/2.505be654.chunk.js.map",
+    "static/js/3.d6f2dd3b.chunk.js": "/polichroma/static/js/3.d6f2dd3b.chunk.js",
+    "static/js/3.d6f2dd3b.chunk.js.map": "/polichroma/static/js/3.d6f2dd3b.chunk.js.map",
     "index.html": "/polichroma/index.html",
-    "static/css/2.ed18cded.chunk.css.map": "/polichroma/static/css/2.ed18cded.chunk.css.map",
-    "static/css/main.9bc2b5b4.chunk.css.map": "/polichroma/static/css/main.9bc2b5b4.chunk.css.map",
-    "static/js/2.8e326a91.chunk.js.LICENSE.txt": "/polichroma/static/js/2.8e326a91.chunk.js.LICENSE.txt"
+    "static/css/2.e7921d76.chunk.css.map": "/polichroma/static/css/2.e7921d76.chunk.css.map",
+    "static/css/main.0e975e33.chunk.css.map": "/polichroma/static/css/main.0e975e33.chunk.css.map",
+    "static/js/2.505be654.chunk.js.LICENSE.txt": "/polichroma/static/js/2.505be654.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5bfba8a.js",
-    "static/css/2.ed18cded.chunk.css",
-    "static/js/2.8e326a91.chunk.js",
-    "static/css/main.9bc2b5b4.chunk.css",
-    "static/js/main.7988d8d2.chunk.js"
+    "static/js/runtime-main.cb127696.js",
+    "static/css/2.e7921d76.chunk.css",
+    "static/js/2.505be654.chunk.js",
+    "static/css/main.0e975e33.chunk.css",
+    "static/js/main.e7439b36.chunk.js"
   ]
 }
