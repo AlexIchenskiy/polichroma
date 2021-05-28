@@ -1,11 +1,20 @@
-.root {
+html, body, :root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
+
+/*Main page styles*/
 
 .App {
   width: auto;
+  height: auto;
   margin: 1%;
+  height: 96vh;
 }
 
 .App-header { 
@@ -35,6 +44,7 @@
 
 .App-body { 
   padding: 2%;
+  height: auto;
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   grid-template-rows: 1fr;
@@ -44,7 +54,8 @@
 }
 
 .App-body-left {
-  padding: 10% 5%;
+  height: auto;
+  padding: 5% 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,12 +85,21 @@
 }
 
 .App-body-button {
+  width: 100%;
+}
+
+.App-body-button-link {
   width: 60%;
 }
 
 .Logo {
   display: inline;
   font-family: 'Montserrat', sans-serif;
+}
+
+.Link-nostyle, .Link-nostyle:hover, .Link-nostyle:active, .Link-nostyle:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 .Modal-nav-bg {
@@ -107,7 +127,11 @@
 
 .Modal-nav > * {
   margin: 5% 2%;
-  width: 100px;
+  width: 60%!important;
+}
+
+.Modal-nav > .Link-outer > * {
+  width: 100%!important;
 }
 
 .Modal-closed {
@@ -115,7 +139,11 @@
 }
 
 .Burger-menu {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
   visibility: hidden;
+  opacity: 0;
   position: absolute;
 }
 
@@ -141,21 +169,75 @@
   position: absolute;
 }
 
-.Color-changeable {
-  animation: color-change 60s infinite;
+/*Generator styles*/
+
+.Generator {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  margin: 1%;
+  height: 96vh;
 }
 
-.Bg-color-changeable {
-  animation: bg-color-change 60s infinite;
+.Generator-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 1.5%;
 }
 
-.Border-color-changeable {
-  animation: border-color-change 60s infinite;
+.Generator-toolbar-subtitle {
+  width: 40%;
+  color: #5F5F5F;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
+
+.Generator-toolbar-tools {
+  width: 60%;
+}
+
+.Generator-palette-outer {
+  width: 100%;
+  flex: 1;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Generator-palette-inner {
+  display: flex;
+  padding: 0 3%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+
+.Generator-palette-inner:first-child {
+  border-radius: 8px 0 8px 0;
+}
+
+.Generator-palette-color {
+  width: auto;
+  height: 80%;
+  flex: 1 1 0px;
+}
+
+/*Responsive*/
 
 @media only screen and (max-width: 992px) {
-  .App-body { 
-    padding: 2%;
+  .App {
+    margin: 2%;
+    height: auto;
+  }
+
+  .App-body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -168,6 +250,15 @@
   .App-body-right {
     margin: 10% 0;
   }
+
+  .Generator-toolbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Generator-toolbar-subtitle {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -177,11 +268,13 @@
 
   .Nav-header {
     visibility: hidden;
+    opacity: 0;
     position: absolute;
   }
 
   .Burger-menu {
     visibility: initial;
+    opacity: 1;
     position: initial;
   }
 
@@ -193,52 +286,4 @@
     justify-content: center;
     align-items: center;
   }
-}
-
-@keyframes color-change {
-  0% { color: red; }
-  8.33% { color: orange; }
-  16.66% { color: gold; }
-  25% { color: green; }
-  33.33% { color: cyan; }
-  41.66% { color: blue; }
-  50% { color: purple; }
-  58.33% { color: blue; }
-  68.66% { color: cyan; }
-  77% { color: green; }
-  85.33% { color: gold; }
-  93.66% { color: orange; }
-  100% { color: red; }
-}
-
-@keyframes bg-color-change {
-  0% { background-color: red; }
-  8.33% { background-color: orange; }
-  16.66% { background-color: gold; }
-  25% { background-color: green; }
-  33.33% { background-color: cyan; }
-  41.66% { background-color: blue; }
-  50% { background-color: purple; }
-  58.33% { background-color: blue; }
-  68.66% { background-color: cyan; }
-  77% { background-color: green; }
-  85.33% { background-color: gold; }
-  93.66% { background-color: orange; }
-  100% { background-color: red; }
-}
-
-@keyframes border-color-change {
-  0% { border-color: red; }
-  8.33% { border-color: orange; }
-  16.66% { border-color: gold; }
-  25% { border-color: green; }
-  33.33% { border-color: cyan; }
-  41.66% { border-color: blue; }
-  50% { border-color: purple; }
-  58.33% { border-color: blue; }
-  68.66% { border-color: cyan; }
-  77% { border-color: green; }
-  85.33% { border-color: gold; }
-  93.66% { border-color: orange; }
-  100% { border-color: red; }
 }
