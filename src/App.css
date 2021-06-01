@@ -206,7 +206,7 @@ html, body, :root {
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .Generator-palette-inner {
@@ -215,12 +215,12 @@ html, body, :root {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 98%;
 }
 
 .Generator-palette-inner:first-child {
-  border-radius: 8px 0 8px 0;
+  border-radius: 0 0 8px 8px;
 }
 
 .Generator-palette-color {
@@ -285,5 +285,16 @@ html, body, :root {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .Generator-palette-inner {
+    flex-direction: column;
+    padding: 3% 0;
+  }
+
+  .Generator-palette-color {
+    width: 80%;
+    height: auto;
+    flex: 1 1 0px;
   }
 }

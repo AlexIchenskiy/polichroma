@@ -26,16 +26,16 @@ function App() {
         <Redirect to='/polichroma' />
       </Route>
       <Route 
-        path='/polichroma' 
+        exact path='/polichroma' 
         render={(props) => (
                 <MainPage {...props} color={hue} />
                )}
       />
-      <Route exact path='/generator'>
-        <Redirect to={'/generator/' + genColors(4)}/>
+      <Route exact path='/polichroma/generator'>
+        <Redirect to={'/polichroma/generator/' + genColors(4)}/>
       </Route>
       <Route 
-        path='/generator'
+        path='/polichroma/generator'
         render={(props) => (
                 <Generator {...props} color={hue} />
                )}
