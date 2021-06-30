@@ -289,7 +289,15 @@ html, body, :root {
 
   .Generator-palette-inner {
     flex-direction: column;
-    padding: 3% 0;
+    padding: 10% 0;
+  }
+
+  .Generator-palette-inner > :first-child {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .Generator-palette-inner > :last-child {
+    border-radius: 0 0 8px 8px;
   }
 
   .Generator-palette-color {
