@@ -9,7 +9,7 @@ import GeneratorToolbar from './generatortoolbar.component';
 import GeneratorPalette from './generatorpalette.component';
 
 function Generator(props) {
-	function genColors(n) {
+	function genColorsRandom(n) {
 	    let colors = '';
 	    for (let i = 0; i < n; i++) {
 	      colors += (((Math.random() * 0xfffff * 1000000).toString(16)).slice(0, 6)) + '-';
@@ -19,7 +19,7 @@ function Generator(props) {
 
 	let handleKeyUp = (target) => {
 		if(target.keyCode === 32) {
-			<Redirect to={'generator/' + genColors(4)} push />
+			<Redirect to={'generator/' + genColorsRandom(4)} push />
 		}
 	}
 
