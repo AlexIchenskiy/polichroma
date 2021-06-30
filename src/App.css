@@ -1,11 +1,15 @@
-html, body, :root {
-  position: fixed;
+html, body, .root {
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+}
+
+body, .root {
+  position: absolute;
 }
 
 /*Main page styles*/
@@ -235,6 +239,7 @@ html, body, :root {
   .App {
     margin: 2%;
     height: auto;
+    width: auto;
   }
 
   .App-body {
@@ -264,6 +269,15 @@ html, body, :root {
 @media only screen and (max-width: 600px) {
   .App-header {
     padding: 2% 5%;
+  }
+
+  .App-body-right {
+    width: 100%;
+    transform: scale(0.9);
+  }
+
+  .App-body-title, .App-boddy-subtitle {
+    width: 100%;
   }
 
   .Nav-header {
