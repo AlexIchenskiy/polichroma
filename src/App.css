@@ -200,6 +200,10 @@ body, .root {
   font-weight: 400;
 }
 
+.Link-toolbar-generate {
+  display: none;
+}
+
 .Generator-toolbar-tools {
   width: 60%;
 }
@@ -318,5 +322,19 @@ body, .root {
     width: 80%;
     height: auto;
     flex: 1 1 0px;
+  }
+
+  .Generator-toolbar-subtitle {
+    display: none;
+  }
+
+  .Generator-toolbar-generate {
+    width: 100%;
+  }
+
+  .Link-toolbar-generate {
+    display: flex;
+    justify-content: center;
+    width: 50%;
   }
 }
