@@ -3,6 +3,7 @@ import React from 'react';
 import { Card } from 'ui-neumorphism';
 
 function GeneratorPalette() {
+	//get colors from path
 	let colors = window.location.pathname.slice(22).split('-').filter((el) => el !== '');
 
 	let elements = [];

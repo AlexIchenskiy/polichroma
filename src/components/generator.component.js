@@ -9,6 +9,7 @@ import GeneratorToolbar from './generatortoolbar.component';
 import GeneratorPalette from './generatorpalette.component';
 
 function Generator(props) {
+	//function to generate string of n random colors
 	function genColorsRandom(n) {
 	    let colors = '';
 	    for (let i = 0; i < n; i++) {
