@@ -12,14 +12,6 @@ function App() {
     return () => clearInterval(interval);
   });
 
-  function genColors(n) {
-    let colors = '';
-    for (let i = 0; i < n; i++) {
-      colors += (((Math.random() * 0xfffff * 1000000).toString(16)).slice(0, 6)) + '-';
-    }
-    return colors.slice(0, -1);
-  }
-
   return (
     <Router>
       <Route exact path='/'>
@@ -32,7 +24,7 @@ function App() {
                )}
       />
       <Route exact path='/polichroma/generator'>
-        <Redirect to={'/polichroma/generator/' + genColors(4)}/>
+        <Redirect to={'/polichroma/generator/'}/>
       </Route>
       <Route 
         path='/polichroma/generator'

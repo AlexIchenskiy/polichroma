@@ -1,22 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 import { Card } from 'ui-neumorphism';
 
 function GeneratorPalette() {
-	//get colors from path
-	let colors = window.location.pathname.slice(22).split('-').filter((el) => el !== '');
+	let [colors, setColors]     = useState(genColorsRandom(4));
+	let [elements, setElements] = useState(null);
 
-	let elements = [];
-
-	for (let i = 0; i < colors.length; i++) {
-		elements.push(
-			<div className='Generator-palette-color' key={`#${colors[i]}`} style={{backgroundColor: `#${colors[i]}`}}>
-			</div>
-		);
+	//function to generate array of n random colors
+	function genColorsRandom(n) {
+	    let colors = [];
+	    for (let i = 0; i < n; i++) {
+	      colors.push(((Math.random() * 0xfffff * 1000000).toString(16)).slice(0, 6));
+	    }
+	    return colors;
 	}
 
+	let handleKeyDown = (target) => {
+		if(target.keyCode === 32) {
+			handleGenerate();
+		}
+	}
+
+	let handleSwipe = () => {
+		handleGenerate();
+	}
+
+	let handleGenerate = () => {
+		setColors(genColorsRandom(4));
+	}
+
+	useEffect(() => {
+		document.addEventListener("keydown", handleKeyDown);
+	}, []);
+
+	useEffect(() => {
+		let elements = [];
+
+		for (let i = 0; i < colors.length; i++) {
+			elements.push(
+				<div className='Generator-palette-color' key={`#${colors[i]}`} style={{backgroundColor: `#${colors[i]}`}}>
+				</div>
+			);
+		}
+
+		setElements(elements);
+	}, [colors]);
+
+	const handlers = useSwipeable({
+		onSwipedUp: () => handleSwipe()
+	});
+
 	return (
-		<div className='Generator-palette-outer' elevation={2}>
+		<div className='Generator-palette-outer' elevation={2} {...handlers} >
 			<Card className='Generator-palette-inner'>
 				{elements}
 			</Card>
