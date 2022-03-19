@@ -27,7 +27,9 @@ function GeneratorPalette() {
 	}
 
 	let handleGenerate = () => {
-		setColors(genColorsRandom(4));
+		let colors = genColorsRandom(4);
+		
+		setColors(colors);
 	}
 
 	useEffect(() => {
@@ -37,9 +39,24 @@ function GeneratorPalette() {
 	useEffect(() => {
 		let elements = [];
 
+		let s = "";
+		let styles = [];
+		for (let i = 0; i < 3; i++) {
+			for (let j = 0; j < 4; j++) {
+				s += "%c       %c ";
+				styles.push(`background: #${colors[j]};`);
+				styles.push("background: null");
+			}
+			s += '\n';
+		}
+
+		console.log(s, ...styles);
+		console.log(colors.join("  "));
+
 		for (let i = 0; i < colors.length; i++) {
 			elements.push(
 				<div className='Generator-palette-color' key={`#${colors[i]}`} style={{backgroundColor: `#${colors[i]}`}}>
+					
 				</div>
 			);
 		}

@@ -182,6 +182,7 @@ body {
   height: auto;
   margin: 1%;
   height: 96vh;
+  min-height: 500px;
 }
 
 .Generator-toolbar {
@@ -215,7 +216,7 @@ body {
 
 .Generator-palette-inner {
   display: flex;
-  padding: 0 3%;
+  padding: 0;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -223,13 +224,17 @@ body {
   height: 98%;
 }
 
-.Generator-palette-inner:first-child {
-  border-radius: 0 0 8px 8px;
+.Generator-palette-inner div:first-child {
+  border-radius: 0 0 0 8px;
+}
+
+.Generator-palette-inner div:last-child {
+  border-radius: 0 0 8px 0;
 }
 
 .Generator-palette-color {
   width: auto;
-  height: 80%;
+  height: 100%;
   flex: 1 1 0px;
 }
 
@@ -301,16 +306,24 @@ body {
     align-items: center;
   }
 
+  .Generator {
+    height: 98vh;
+  }
+
+  .Generator-palette-outer {
+    border-radius: 0 0 8px 8px!important;
+  }
+
   .Generator-palette-inner {
     flex-direction: column;
     padding: 10% 0;
   }
 
-  .Generator-palette-inner > :first-child {
+  .Generator-palette-inner div:first-child {
     border-radius: 8px 8px 0 0;
   }
 
-  .Generator-palette-inner > :last-child {
+  .Generator-palette-inner div:last-child {
     border-radius: 0 0 8px 8px;
   }
 
