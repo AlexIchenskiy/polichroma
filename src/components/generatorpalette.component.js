@@ -3,6 +3,9 @@ import { useSwipeable } from 'react-swipeable';
 
 import { Card } from 'ui-neumorphism';
 
+import invertColor from '../utils/invertcolor.util';
+import GeneratorToolset from './generatortoolset.component';
+
 function GeneratorPalette() {
 	let [colors, setColors]     = useState(genColorsRandom(4));
 	let [elements, setElements] = useState(null);
@@ -16,7 +19,7 @@ function GeneratorPalette() {
 	    return colors;
 	}
 
-	let handleKeyDown = (target) => {
+	let handleKeyPress = (target) => {
 		if(target.keyCode === 32) {
 			handleGenerate();
 		}
@@ -33,7 +36,7 @@ function GeneratorPalette() {
 	}
 
 	useEffect(() => {
-		document.addEventListener("keydown", handleKeyDown);
+		document.addEventListener("keypress", handleKeyPress);
 	}, []);
 
 	useEffect(() => {
@@ -56,7 +59,10 @@ function GeneratorPalette() {
 		for (let i = 0; i < colors.length; i++) {
 			elements.push(
 				<div className='Generator-palette-color' key={`#${colors[i]}`} style={{backgroundColor: `#${colors[i]}`}}>
-					
+					<GeneratorToolset 
+						textColor = {invertColor(colors[i], 1).toUpperCase()} 
+						color = {colors[i].toUpperCase()}
+					/>
 				</div>
 			);
 		}

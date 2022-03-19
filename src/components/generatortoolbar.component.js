@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import { Button, Card } from 'ui-neumorphism';
+import {  Card } from 'ui-neumorphism';
 
 function GeneratorToolbar() {
 	return (
