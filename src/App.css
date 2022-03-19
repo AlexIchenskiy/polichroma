@@ -316,11 +316,11 @@ body {
 
   .Generator-palette-inner {
     flex-direction: column;
-    padding: 10% 0;
+    padding: 0;
   }
 
   .Generator-palette-inner div:first-child {
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
   }
 
   .Generator-palette-inner div:last-child {
@@ -328,7 +328,7 @@ body {
   }
 
   .Generator-palette-color {
-    width: 80%;
+    width: 100%;
     height: auto;
     flex: 1 1 0px;
   }
