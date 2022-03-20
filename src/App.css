@@ -1,3 +1,7 @@
+* {
+  transition: all 0.3s;
+}
+
 html, body, #root {
   top: 0;
   left: 0;
@@ -27,6 +31,14 @@ body {
   align-items: center;
 }
 
+.Link-logo:hover {
+  transform: scale(1.05);
+}
+
+.Link-logo:active {
+  transform: scale(0.95);
+}
+
 .Nav-header{
   width: auto;
   color: black;
@@ -43,6 +55,10 @@ body {
 .Nav-header ul > li {
   display: inline-block;
   margin: 0 5px;
+}
+
+.Nav-header ul > li:hover {
+  transform: scale(1.05);
 }
 
 .App-body { 
@@ -170,6 +186,10 @@ body {
   height: 90px!important;
   border-radius: 45px!important;
   position: absolute;
+}
+
+.rcp__knob {
+  display: none;
 }
 
 /*Generator styles*/

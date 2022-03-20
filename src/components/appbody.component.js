@@ -10,9 +10,7 @@ function AppBody(props) {
   const [hue, setHue] = useState(0);
 
   const onInput = newHue => {
-    if (newHue !== hue) {
-      setHue(newHue);
-    };
+    return;
   };
 
   const [colorHsl, setColorHsl] = useState(`hsl(${props.color}, 100%, 50%)`);

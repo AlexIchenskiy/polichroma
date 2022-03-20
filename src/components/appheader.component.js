@@ -14,7 +14,7 @@ function AppHeader(props) {
   return (
     <Card style={{borderRadius: 0}}>
       <header className="App-header">
-        <Link to="" className="Link-nostyle"><div><h1 className="Logo">poli</h1><h1 className="Logo" style={{color: colorHsl}}>chroma</h1></div></Link>
+        <Link to="" className="Link-nostyle Link-logo"><div><h1 className="Logo">poli</h1><h1 className="Logo" style={{color: colorHsl}}>chroma</h1></div></Link>
         <nav className="Nav-header">
           <ul>
             <li><Link to="/polichroma/generator" className="Link-nostyle"><Button text>Generate</Button></Link></li>
