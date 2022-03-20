@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import { Card } from 'ui-neumorphism';
 
+import isMobile from 'react-device-detect';
+
 function GeneratorToolbar() {
 	const [width, setWidth]       = useState(window.innerWidth);
-	const [isMobile, setIsMobile] = useState(width < 768);
+	const [isMobileWidth, setIsMobileWidth] = useState(width < 768);
 
 	function handleWindowSizeChange() {
 		setWidth(window.innerWidth);
@@ -18,13 +20,13 @@ function GeneratorToolbar() {
 	}, []);
 
 	useEffect(() => {
-		setIsMobile(width < 768);
+		setIsMobileWidth(width < 768);
 	}, [width]);
 
 	return (
 		<Card className='Generator-toolbar' style={{borderRadius: '0'}} inset >
 			<h2 className='Generator-toolbar-subtitle'>
-				{isMobile ? "Swipe up to quickly generate a new palette!" :
+				{isMobile && isMobileWidth ? "Swipe up to quickly generate a new palette!" :
 							"Press spacebar to quickly generate a new palette!"}
 			</h2>
 			<div className='Generator-toolbar-tools'>
