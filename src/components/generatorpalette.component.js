@@ -76,7 +76,7 @@ function GeneratorPalette() {
 
 	return (
 		<div className='Generator-palette-outer' elevation={2} {...handlers} >
-			<Card className='Generator-palette-inner'>
+			<Card className='Generator-palette-inner' inset >
 				{elements}
 			</Card>
 		</div>
