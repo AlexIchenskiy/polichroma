@@ -10,7 +10,7 @@ import genColorsRandom from '../utils/gencolorsrandom.util';
 import genColorsMonochromatic from '../utils/gencolorsmonochromatic.util';
 
 function GeneratorPalette() {
-	let [colors, setColors]     = useState(genColorsRandom(4));
+	let [colors, setColors]     = useState(genColorsMonochromatic(4));
 	let [elements, setElements] = useState(null);
 	let [isReady, setIsReady]   = useState(true);
 
