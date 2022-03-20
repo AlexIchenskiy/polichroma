@@ -7,12 +7,14 @@ function GeneratorToolset(props) {
 
 	return (
 		<div className = 'Generator-palette-toolset'>
-            <div>
+            <div className = 'Generator-palette-toolset-tools'>
 
             </div>
-            <h1 style = {styles} >
-                {props.color}
-            </h1>
+            <div className = 'Generator-palette-toolset-colorname'>
+                <h1 style = {styles} >
+                    {props.color}
+                </h1>
+            </div>
         </div>
 	);
 }
