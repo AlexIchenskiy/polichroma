@@ -12,7 +12,7 @@ function AppHeader(props) {
   useEffect(() => setColorHsl(`hsl(${props.color}, 100%, 50%)`), [props.color]);
 
   return (
-    <Card style={{ borderRadius: '8px 8px 0 0'}}>
+    <Card style={{borderRadius: 0}}>
       <header className="App-header">
         <Link to="" className="Link-nostyle"><div><h1 className="Logo">poli</h1><h1 className="Logo" style={{color: colorHsl}}>chroma</h1></div></Link>
         <nav className="Nav-header">

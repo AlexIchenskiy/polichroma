@@ -17,8 +17,7 @@ body {
 .App {
   width: auto;
   height: auto;
-  min-height: 96vh;
-  margin: 1%;
+  min-height: 100vh;
 }
 
 .App-header { 
@@ -180,8 +179,7 @@ body {
   flex-direction: column;
   width: auto;
   height: auto;
-  margin: 1%;
-  height: 96vh;
+  height: 100vh;
   min-height: 500px;
 }
 
@@ -225,11 +223,11 @@ body {
 }
 
 .Generator-palette-inner div:first-child {
-  border-radius: 0 0 0 8px;
+  border-radius: 0;
 }
 
 .Generator-palette-inner div:last-child {
-  border-radius: 0 0 8px 0;
+  border-radius: 0;
 }
 
 .Generator-palette-color {
@@ -250,7 +248,6 @@ body {
 
 @media only screen and (max-width: 992px) {
   .App {
-    margin: 2%;
     height: auto;
     width: auto;
   }
@@ -315,7 +312,7 @@ body {
   }
 
   .Generator {
-    height: 98vh;
+    height: 100vh;
   }
 
   .Generator-palette-outer {
@@ -332,17 +329,13 @@ body {
   }
 
   .Generator-palette-inner div:last-child {
-    border-radius: 0 0 8px 8px;
+    border-radius: 0;
   }
 
   .Generator-palette-color {
     width: 100%;
     height: auto;
     flex: 1 1 0px;
-  }
-
-  .Generator-toolbar-subtitle {
-    display: none;
   }
 
   .Generator-toolbar-generate {
