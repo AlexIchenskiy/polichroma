@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Redirect, HashRouter as Router, Route } from 'react-router-dom';
 
 import MainPage from './components/mainpage.component';
 import Generator from './components/generator.component';
@@ -15,19 +15,19 @@ function App() {
   return (
     <Router>
       <Route exact path='/'>
-        <Redirect to='/polichroma' />
+        <Redirect to='/' />
       </Route>
       <Route 
-        exact path='/polichroma' 
+        exact path='/' 
         render={(props) => (
                 <MainPage {...props} color={hue} />
                )}
       />
-      <Route exact path='/polichroma/generator'>
-        <Redirect to={'/polichroma/generator/'}/>
+      <Route exact path='/generator'>
+        <Redirect to={'/generator'}/>
       </Route>
       <Route 
-        path='/polichroma/generator'
+        path='/generator'
         render={(props) => (
                 <Generator {...props} color={hue} />
                )}

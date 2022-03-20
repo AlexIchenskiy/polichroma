@@ -22,7 +22,7 @@ function AppBody(props) {
       <section className="App-body-left">
         <p className="App-body-title">Fast and easy neumorphic <b style={{color: colorHsl}}>color</b> palettes generator!</p>
         <p className="App-body-subtitle">Create and export perfect palette for your art project easily.</p>
-        <Link to="/polichroma/generator" className='Link-nostyle App-body-button-link'>
+        <Link to="/generator" className='Link-nostyle App-body-button-link'>
           <Button className="App-body-button" style={{height:'55px'}}>
             <h1 style={{fontSize: '18px', color: colorHsl}}>Generate!</h1>
           </Button>

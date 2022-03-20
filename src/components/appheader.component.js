@@ -17,15 +17,20 @@ function AppHeader(props) {
         <Link to="" className="Link-nostyle Link-logo"><div><h1 className="Logo">poli</h1><h1 className="Logo" style={{color: colorHsl}}>chroma</h1></div></Link>
         <nav className="Nav-header">
           <ul>
-            <li><Link to="/polichroma/generator" className="Link-nostyle"><Button text>Generate</Button></Link></li>
+            <li><Link to="/generator" className="Link-nostyle"><Button text>Generate</Button></Link></li>
             <li><Divider style={{width:'4px', height:'100%'}} dense /></li>
             <li><Button text>Sign in</Button></li>
             <li><Button><p style={{color: colorHsl}}>Sign up</p></Button></li>
           </ul>
         </nav>
-        <Button className="Burger-menu" onClick={() => setVisible(true)}>
-            <span style={{color: colorHsl}}>&#9776;</span>
-        </Button>
+        <div className="Burger-menu" onClick={() => setVisible(!visible)}>
+            <div style={{backgroundColor: colorHsl}} 
+                 className={visible ? 'active' : 'inactive'} ></div>
+            <div style={{backgroundColor: colorHsl}}
+                 className={visible ? 'active' : 'inactive'} ></div>
+            <div style={{backgroundColor: colorHsl}}
+                 className={visible ? 'active' : 'inactive'} ></div>
+        </div>
       </header>
       <MobileModal color={props.color} setVisible = {(e) => setVisible(e)} visible = {visible}/>
     </Card>

@@ -121,27 +121,16 @@ body {
   color: inherit;
 }
 
-.Modal-nav-bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #e4ebf5;
-  opacity: 0.96;
-}
-
 .Modal-nav {
-  width: 225px!important;
-  height: 300px;
+  width: 100%!important;
+  height: 100%;
+  border-radius: 0!important;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 
 .Modal-nav > * {
@@ -153,17 +142,17 @@ body {
   width: 100%!important;
 }
 
-.Modal-closed {
-  display: none;
+.Modal-nav-closed {
+  left: 100%;
+}
+
+.Modal-nav-opened {
+  left: 0;
 }
 
 .Burger-menu {
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
   visibility: hidden;
   opacity: 0;
-  position: absolute;
 }
 
 .App-body-right {
@@ -318,7 +307,29 @@ body {
   .Burger-menu {
     visibility: initial;
     opacity: 1;
-    position: initial;
+    display: flex;
+    width: 40px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Burger-menu div {
+    width: 100%;
+    height: 1.5px;
+  }
+
+  .Burger-menu div.active:first-child {
+    transform: rotate(-45deg) translateY(12.5px);
+  }
+
+  .Burger-menu div.active:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .Burger-menu div.active:last-child {
+    transform: rotate(45deg) translateY(-12.5px);
   }
 
   .Color-picker-outer {

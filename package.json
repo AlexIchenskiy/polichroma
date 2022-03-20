@@ -12,6 +12,7 @@
     "react-device-detect": "^2.1.2",
     "react-dom": "^16.0.3",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
     "react-swipeable": "^6.2.1",
     "ui-neumorphism": "^1.1.3",
