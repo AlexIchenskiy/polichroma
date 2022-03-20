@@ -6,31 +6,27 @@ import { Card } from 'ui-neumorphism';
 import invertColor from '../utils/invertcolor.util';
 import GeneratorToolset from './generatortoolset.component';
 
+import genColorsRandom from '../utils/gencolorsrandom.util';
+import genColorsMonochromatic from '../utils/gencolorsmonochromatic.util';
+
 function GeneratorPalette() {
 	let [colors, setColors]     = useState(genColorsRandom(4));
 	let [elements, setElements] = useState(null);
-
-	//function to generate array of n random colors
-	function genColorsRandom(n) {
-	    let colors = [];
-	    for (let i = 0; i < n; i++) {
-	      colors.push(((Math.random() * 0xfffff * 1000000).toString(16)).slice(0, 6));
-	    }
-	    return colors;
-	}
+	let [isReady, setIsReady]   = useState(true);
 
 	let handleKeyPress = (target) => {
 		if(target.keyCode === 32) {
-			handleGenerate();
+			setTimeout(handleGenerate(), 100);
 		}
 	}
 
 	let handleSwipe = () => {
-		handleGenerate();
+		setTimeout(handleGenerate(), 100);
 	}
 
 	let handleGenerate = () => {
-		let colors = genColorsRandom(4);
+		let colors = genColorsMonochromatic(4);
+		console.log(colors);
 		
 		setColors(colors);
 	}
