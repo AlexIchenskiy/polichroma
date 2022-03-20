@@ -152,6 +152,7 @@ body {
 
 .Burger-menu {
   visibility: hidden;
+  display: none;
   opacity: 0;
 }
 
