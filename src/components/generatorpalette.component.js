@@ -10,9 +10,9 @@ import genColorsRandom from '../utils/gencolorsrandom.util';
 import genColorsMonochromatic from '../utils/gencolorsmonochromatic.util';
 
 function GeneratorPalette() {
-	let [colors, setColors]     = useState(genColorsMonochromatic(4));
-	let [elements, setElements] = useState(null);
-	let [isReady, setIsReady]   = useState(true);
+	let [elements, setElements]         = useState(null);
+	let [colorNumber, setIsColorNumber] = useState(5);
+	let [colors, setColors]             = useState(genColorsMonochromatic(colorNumber));
 
 	let handleKeyPress = (target) => {
 		if(target.keyCode === 32) {
@@ -25,7 +25,7 @@ function GeneratorPalette() {
 	}
 
 	let handleGenerate = () => {
-		let colors = genColorsMonochromatic(4);
+		let colors = genColorsMonochromatic(colorNumber);
 		
 		setColors(colors);
 	}
