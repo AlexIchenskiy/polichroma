@@ -26,7 +26,6 @@ function GeneratorPalette() {
 
 	let handleGenerate = () => {
 		let colors = genColorsMonochromatic(4);
-		console.log(colors);
 		
 		setColors(colors);
 	}
