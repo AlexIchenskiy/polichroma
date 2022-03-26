@@ -26,7 +26,7 @@ function GeneratorToolbar() {
 	return (
 		<Card className='Generator-toolbar' style={{borderRadius: '0'}} inset >
 			<h2 className='Generator-toolbar-subtitle'>
-				{isMobile || isMobileWidth ? "Swipe up to quickly generate a new palette!" :
+				{isMobile || isMobileWidth ? "Swipe up!" :
 							"Press spacebar to quickly generate a new palette!"}
 			</h2>
 			<div className='Generator-toolbar-tools'>

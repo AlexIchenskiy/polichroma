@@ -276,12 +276,20 @@ body {
   }
 
   .Generator-toolbar {
-    flex-direction: column;
+    display: flex;
+    height: 8%;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
   }
 
   .Generator-toolbar-subtitle {
     text-align: center;
+  }
+
+  .Generator-toolbar-tools {
+    align-self: stretch;
+    height: 100%;
   }
 }
 
