@@ -210,6 +210,65 @@ body {
 
 .Generator-toolbar-tools {
   width: 60%;
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Generator-toolbar-method {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  border-radius: 10px;
+  border: 5px solid;
+}
+
+.Generator-toolbar-method-outer {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.Generator-toolbar-method-inner {
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: -10px;
+  top: -10px;
+  height: auto;
+  padding: 25px;
+}
+
+.Generator-toolbar-method-inner.closed {
+  opacity: 0;
+}
+
+.Generator-toolbar-method-inner.opened {
+  opacity: 1;
+}
+
+.Generator-toolbar-method-inner-element {
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Generator-toolbar-method:hover {
+  transform: scale(1.1);
+}
+
+.Generator-toolbar-method:active {
+  transform: scale(0.95);
 }
 
 .Generator-palette-outer {
@@ -429,6 +488,11 @@ body {
 
   .Generator-toolbar {
     height: 8%;
+    padding: 2% 5%;
+  }
+
+  .Generator-toolbar-subtitle {
+    text-align: start;
   }
 
   .Generator-toolbar-generate {

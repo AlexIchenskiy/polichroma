@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Button, Card, Dialog } from 'ui-neumorphism';
+import { Button, Card } from 'ui-neumorphism';
 
 function MobileModal(props) {
   const [colorHsl, setColorHsl] = useState(`hsl(${props.color}, 100%, 50%)`);

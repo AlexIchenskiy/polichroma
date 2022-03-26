@@ -6,13 +6,27 @@ import { Card } from 'ui-neumorphism';
 import invertColor from '../utils/invertcolor.util';
 import GeneratorToolset from './generatortoolset.component';
 
+import genColorsAnalogous from '../utils/gencolorsanalogous.util';
 import genColorsRandom from '../utils/gencolorsrandom.util';
 import genColorsMonochromatic from '../utils/gencolorsmonochromatic.util';
 
-function GeneratorPalette() {
+function GeneratorPalette(props) {
 	let [elements, setElements]         = useState(null);
-	let [colorNumber, setIsColorNumber] = useState(5);
-	let [colors, setColors]             = useState(genColorsMonochromatic(colorNumber));
+	let [colorNumber, setIsColorNumber] = useState(4);
+	let [colors, setColors]             = useState(genColors());
+
+	function genColors() {
+		switch(props.genMethod) {
+			default:
+				return genColorsAnalogous(colorNumber);
+			case 0:
+				return genColorsAnalogous(colorNumber);
+			case 1:
+				return genColorsMonochromatic(colorNumber);
+			case 2:
+				return genColorsRandom(colorNumber);
+		}
+	}
 
 	let handleKeyPress = (target) => {
 		if(target.keyCode === 32) {
@@ -25,7 +39,7 @@ function GeneratorPalette() {
 	}
 
 	let handleGenerate = () => {
-		let colors = genColorsMonochromatic(colorNumber);
+		let colors = genColors();
 		
 		setColors(colors);
 	}
@@ -40,7 +54,7 @@ function GeneratorPalette() {
 		let s = "";
 		let styles = [];
 		for (let i = 0; i < 3; i++) {
-			for (let j = 0; j < 4; j++) {
+			for (let j = 0; j < colorNumber; j++) {
 				s += "%c       %c ";
 				styles.push(`background: #${colors[j]};`);
 				styles.push("background: null");
