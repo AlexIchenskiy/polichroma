@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Card } from 'ui-neumorphism';
 
@@ -13,7 +13,7 @@ function Generator(props) {
 		<Card className='Generator' elevation={2}>
 			<AppHeader color={props.color} />
 			<GeneratorToolbar color={props.color} setGenMethod={(e) => setGenMethod(e)} />
-			<GeneratorPalette genMethod={genMethod} />
+			<GeneratorPalette key={genMethod} genMethod={genMethod} />
 		</Card>
 	);
 }

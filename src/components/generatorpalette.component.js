@@ -13,18 +13,19 @@ import genColorsMonochromatic from '../utils/gencolorsmonochromatic.util';
 function GeneratorPalette(props) {
 	let [elements, setElements]         = useState(null);
 	let [colorNumber, setIsColorNumber] = useState(4);
+	let [genMethod, setGenMethod] = useState(props.genMethod);
 	let [colors, setColors]             = useState(genColors());
 
 	function genColors() {
-		switch(props.genMethod) {
-			default:
-				return genColorsAnalogous(colorNumber);
+		switch(genMethod) {
 			case 0:
 				return genColorsAnalogous(colorNumber);
 			case 1:
 				return genColorsMonochromatic(colorNumber);
 			case 2:
 				return genColorsRandom(colorNumber);
+			default:
+				return genColorsAnalogous(colorNumber);
 		}
 	}
 
@@ -39,14 +40,18 @@ function GeneratorPalette(props) {
 	}
 
 	let handleGenerate = () => {
-		let colors = genColors();
-		
-		setColors(colors);
+		console.log(props.genMethod)
+		let colorarr = genColors;
+		setColors(colorarr);
 	}
 
 	useEffect(() => {
 		document.addEventListener("keypress", handleKeyPress);
 	}, []);
+
+	useEffect(() => {
+		setGenMethod(props.genMethod);
+	}, [props.genMethod]);
 
 	useEffect(() => {
 		let elements = [];
@@ -61,7 +66,7 @@ function GeneratorPalette(props) {
 			}
 			s += '\n';
 		}
-
+		
 		console.log(s, ...styles);
 		console.log(colors.join("  "));
 

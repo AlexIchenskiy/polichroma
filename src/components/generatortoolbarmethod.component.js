@@ -66,6 +66,7 @@ function GeneratorToolbarMethod(props) {
                     flat={active === 1}
                     bordered={false}
                     onClick={() => {setActive(1);setOpened(false)}}
+                    title={'Monochromatic'}
                 >
                     <h3>Monochromatic</h3>
                 </Button>

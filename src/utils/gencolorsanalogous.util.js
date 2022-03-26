@@ -10,7 +10,7 @@ export default function genColorsAnalogous(n) {
 
     while(true) {
         colors = []
-        while (colors.length != n) {
+        while (colors.length !== n) {
             if (!(hslToHex(h, s, l) in colors)) {
                 colors.push(hslToHex(h, s, l));
             }
