@@ -40,7 +40,6 @@ function GeneratorPalette(props) {
 	}
 
 	let handleGenerate = () => {
-		console.log(props.genMethod)
 		let colorarr = genColors;
 		setColors(colorarr);
 	}
