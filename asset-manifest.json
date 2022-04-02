@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/polichroma/static/css/main.555af125.chunk.css",
+    "main.css": "/polichroma/static/css/main.41637212.chunk.css",
     "main.js": "/polichroma/static/js/main.a24ff23e.chunk.js",
     "main.js.map": "/polichroma/static/js/main.a24ff23e.chunk.js.map",
     "runtime-main.js": "/polichroma/static/js/runtime-main.e0848756.js",
@@ -12,14 +12,14 @@
     "static/js/3.8044436d.chunk.js.map": "/polichroma/static/js/3.8044436d.chunk.js.map",
     "index.html": "/polichroma/index.html",
     "static/css/2.84573d80.chunk.css.map": "/polichroma/static/css/2.84573d80.chunk.css.map",
-    "static/css/main.555af125.chunk.css.map": "/polichroma/static/css/main.555af125.chunk.css.map",
+    "static/css/main.41637212.chunk.css.map": "/polichroma/static/css/main.41637212.chunk.css.map",
     "static/js/2.af6fed4d.chunk.js.LICENSE.txt": "/polichroma/static/js/2.af6fed4d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e0848756.js",
     "static/css/2.84573d80.chunk.css",
     "static/js/2.af6fed4d.chunk.js",
-    "static/css/main.555af125.chunk.css",
+    "static/css/main.41637212.chunk.css",
     "static/js/main.a24ff23e.chunk.js"
   ]
 }
