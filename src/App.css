@@ -27,6 +27,8 @@ body {
 .App-header { 
   padding: 1.5%;
   display: flex;
+  max-height: 10vh;
+  min-height: 50px;
   justify-content: space-between;
   align-items: center;
 }
@@ -61,11 +63,10 @@ body {
   transform: scale(1.05);
 }
 
-.App-body { 
-  padding: 2%;
+.App-body {
   height: auto;
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
@@ -83,15 +84,16 @@ body {
 }
 
 .App-body-left > * {
-  margin-bottom: 7.5%;
+  margin-bottom: 25px;
 }
 
 .App-body-title {
   width: 80%;
-  font-size: 48px;
+  font-size: 46px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .App-body-subtitle {
@@ -101,10 +103,12 @@ body {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   font-weight: 400;
+  margin-bottom: 50px;
 }
 
 .App-body-button {
   width: 100%;
+  max-width: 250px;
 }
 
 .App-body-button-link {
@@ -390,13 +394,13 @@ body {
     padding: 2% 5%;
   }
 
+  .App-body-title {
+    width: 90%;
+  }
+
   .App-body-right {
     width: 100%;
     transform: scale(0.9);
-  }
-
-  .App-body-title, .App-boddy-subtitle {
-    width: 100%;
   }
 
   .Nav-header {
