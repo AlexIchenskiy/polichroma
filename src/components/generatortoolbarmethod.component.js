@@ -66,7 +66,6 @@ function GeneratorToolbarMethod(props) {
                     flat={active === 1}
                     bordered={false}
                     onClick={() => {setActive(1);setOpened(false)}}
-                    title={'Monochromatic'}
                 >
                     <h3>Monochromatic</h3>
                 </Button>
@@ -76,7 +75,6 @@ function GeneratorToolbarMethod(props) {
                     flat={active === 2}
                     bordered={false}
                     onClick={() => {setActive(2);setOpened(false)}}
-                    title={'Complementary'}
                 >
                     <h3>Complementary</h3>
                 </Button>
@@ -86,6 +84,15 @@ function GeneratorToolbarMethod(props) {
                     flat={active === 3}
                     bordered={false}
                     onClick={() => {setActive(3);setOpened(false)}}
+                >
+                    <h3>Split-Complementary</h3>
+                </Button>
+                <Button 
+                    className='Generator-toolbar-method-inner-element' 
+                    text={active !== 4}
+                    flat={active === 4}
+                    bordered={false}
+                    onClick={() => {setActive(4);setOpened(false)}}
                 >
                     <h3>Random</h3>
                 </Button>
