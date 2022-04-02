@@ -1,5 +1,5 @@
-import hslToHex from "./hsltohex.util";
-import genrandomnumber from "./genrandomnumber.util";
+import hslToHex from "../hsltohex.util";
+import genrandomnumber from "../genrandomnumber.util";
 
 export default function genColorsAnalogous(n) {
     let colors = [];

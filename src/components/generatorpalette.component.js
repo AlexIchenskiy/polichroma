@@ -6,14 +6,15 @@ import { Card } from 'ui-neumorphism';
 import invertColor from '../utils/invertcolor.util';
 import GeneratorToolset from './generatortoolset.component';
 
-import genColorsAnalogous from '../utils/gencolorsanalogous.util';
-import genColorsRandom from '../utils/gencolorsrandom.util';
-import genColorsMonochromatic from '../utils/gencolorsmonochromatic.util';
+import genColorsAnalogous from '../utils/genmethods/gencolorsanalogous.util';
+import genColorsRandom from '../utils/genmethods/gencolorsrandom.util';
+import genColorsMonochromatic from '../utils/genmethods/gencolorsmonochromatic.util';
+import genColorsComplementary from '../utils/genmethods/gencolorscomplementary.util';
 
 function GeneratorPalette(props) {
 	let [elements, setElements]         = useState(null);
-	let [colorNumber, setIsColorNumber] = useState(4);
-	let [genMethod, setGenMethod] = useState(props.genMethod);
+	let [colorNumber, setIsColorNumber] = useState(5);
+	let [genMethod, setGenMethod]       = useState(props.genMethod);
 	let [colors, setColors]             = useState(genColors());
 
 	function genColors() {
@@ -23,6 +24,8 @@ function GeneratorPalette(props) {
 			case 1:
 				return genColorsMonochromatic(colorNumber);
 			case 2:
+				return genColorsComplementary(colorNumber);
+			case 3:
 				return genColorsRandom(colorNumber);
 			default:
 				return genColorsAnalogous(colorNumber);
