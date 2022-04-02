@@ -11,6 +11,9 @@ import genColorsRandom from '../utils/genmethods/gencolorsrandom.util';
 import genColorsMonochromatic from '../utils/genmethods/gencolorsmonochromatic.util';
 import genColorsComplementary from '../utils/genmethods/gencolorscomplementary.util';
 import genColorsSplitComplementary from '../utils/genmethods/gencolorssplitcomplementary.util';
+import genColorsSquare from '../utils/genmethods/gencolorssquare.util';
+import genColorsTetradic from '../utils/genmethods/gencolorstetradic.util';
+import genColorsTriadic from '../utils/genmethods/gencolorstriadic.util';
 
 function GeneratorPalette(props) {
 	let [elements, setElements]         = useState(null);
@@ -29,6 +32,12 @@ function GeneratorPalette(props) {
 			case 3:
 				return genColorsSplitComplementary(colorNumber);
 			case 4:
+				return genColorsSquare(colorNumber);
+			case 5:
+				return genColorsTetradic(colorNumber);
+			case 6:
+				return genColorsTriadic(colorNumber);
+			case 7:
 				return genColorsRandom(colorNumber);
 			default:
 				return genColorsAnalogous(colorNumber);

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { setUserAgent } from 'react-device-detect';
 
 import { Button, Card } from 'ui-neumorphism';
 
@@ -93,6 +92,33 @@ function GeneratorToolbarMethod(props) {
                     flat={active === 4}
                     bordered={false}
                     onClick={() => {setActive(4);setOpened(false)}}
+                >
+                    <h3>Square</h3>
+                </Button>
+                <Button 
+                    className='Generator-toolbar-method-inner-element' 
+                    text={active !== 5}
+                    flat={active === 5}
+                    bordered={false}
+                    onClick={() => {setActive(5);setOpened(false)}}
+                >
+                    <h3>Tetradic</h3>
+                </Button>
+                <Button 
+                    className='Generator-toolbar-method-inner-element' 
+                    text={active !== 6}
+                    flat={active === 6}
+                    bordered={false}
+                    onClick={() => {setActive(6);setOpened(false)}}
+                >
+                    <h3>Triadic</h3>
+                </Button>
+                <Button 
+                    className='Generator-toolbar-method-inner-element' 
+                    text={active !== 7}
+                    flat={active === 7}
+                    bordered={false}
+                    onClick={() => {setActive(7);setOpened(false)}}
                 >
                     <h3>Random</h3>
                 </Button>
