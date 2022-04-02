@@ -5,26 +5,19 @@ export default function genColorsComplementary(n) {
     let colors = [];
 
     let amount = genrandomnumber(7, 10);
-    let factor = genrandomnumber(0, 1) === 1 ? 1 : -1;
+    let factor = 1;
+    let after  = genrandomnumber(0, 1) === 0 ? Math.round(n/2) : Math.floor(n/2);
 
     let h = genrandomnumber(0, 360);
     let s = genrandomnumber(30, 80);
-    let l;
-    if (factor === -1) {
-        l = genrandomnumber(20 + n * amount, 100);
-    } else {
-        l = genrandomnumber(20, 100 - n * amount);
-    }
+    let l = genrandomnumber(20, 100 - n * amount);
 
     while(true) {
         colors = []
         for (let i = 0; i < n; i++) {
-            if (i === Math.round(n/2)) {
-                if (factor === -1) {
-                    l = genrandomnumber(20 + n * amount, 100);
-                } else {
-                    l = genrandomnumber(20, 100 - n * amount);
-                }
+            if (i === after) {
+                factor = -1;
+                l = genrandomnumber(20 + n * amount, 100);
 
                 h += 180;
                 if (h > 360) {
