@@ -8,7 +8,7 @@ export default function genColorsTriadic(n) {
 
     let h = genrandomnumber(0, 360);
     let s = genrandomnumber(20, 80);
-    let l = genrandomnumber(20, 80);
+    let l = genrandomnumber(40, 75);
 
     let chunks = breaknumintoparts(n, 3);
     let temp = chunks[2];

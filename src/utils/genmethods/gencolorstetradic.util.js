@@ -8,7 +8,7 @@ export default function genColorsTetradic(n) {
 
     let h = genrandomnumber(0, 360);
     let s = genrandomnumber(20, 80);
-    let l = genrandomnumber(20, 80);
+    let l = genrandomnumber(40, 75);
 
     let chunks = breaknumintoparts(n, 4);
 
