@@ -251,16 +251,11 @@ body {
 }
 
 .Generator-toolbar-method-inner.closed {
-  transform: scale(0);
   opacity: 0;
-  margin-right: -140px;
-  margin-top: -200px;
-  border-radius: 50%;
   visibility: hidden;
 }
 
 .Generator-toolbar-method-inner.opened {
-  transform: scale(1);
   opacity: 1;
   border-radius: auto;
 }
