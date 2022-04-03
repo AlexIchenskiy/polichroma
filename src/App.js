@@ -23,7 +23,7 @@ function App() {
                 <MainPage {...props} color={hue} />
                )}
       />
-      <Route exact path='/generator'>
+      <Route path='/generator'>
         <Redirect to={'/generator'}/>
       </Route>
       <Route 

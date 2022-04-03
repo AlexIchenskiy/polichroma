@@ -17,9 +17,10 @@ import genColorsTriadic from '../utils/genmethods/gencolorstriadic.util';
 
 function GeneratorPalette(props) {
 	let [elements, setElements]         = useState(null);
-	let [colorNumber, setIsColorNumber] = useState(5);
+	let [colorNumber, setColorNumber]   = useState(props.colornumber);
 	let [genMethod, setGenMethod]       = useState(props.genMethod);
-	let [colors, setColors]             = useState(genColors());
+	let [colors, setColors]             = useState(() => props.colorsarr.length === 0 ?
+											genColors() : props.colorsarr);
 
 	function genColors() {
 		switch(genMethod) {
@@ -44,24 +45,35 @@ function GeneratorPalette(props) {
 		}
 	}
 
-	let handleKeyPress = (target) => {
-		if(target.keyCode === 32) {
-			setTimeout(handleGenerate(), 100);
-		}
-	}
-
 	let handleSwipe = () => {
 		setTimeout(handleGenerate(), 100);
 	}
 
 	let handleGenerate = () => {
-		let colorarr = genColors;
+		let colorarr = genColors();
 		setColors(colorarr);
 	}
 
 	useEffect(() => {
+		let handleKeyPress = (target) => {
+			if(target.keyCode === 32) {
+				setTimeout(handleGenerate(), 100);
+			}
+		}
+
 		document.addEventListener("keypress", handleKeyPress);
-	}, []);
+
+		return () => {
+			document.removeEventListener("keypress", handleKeyPress);
+		}
+	});
+
+	useEffect(() => {
+		if (props.colorsarr.length !== 0) {
+			setColors(props.colorsarr);
+			setColorNumber(props.colornumber);
+		}
+	}, [props.colorsarr]);
 
 	useEffect(() => {
 		setGenMethod(props.genMethod);
@@ -96,7 +108,7 @@ function GeneratorPalette(props) {
 		}
 
 		setElements(elements);
-	}, [colors]);
+	}, [colors, colorNumber]);
 
 	const handlers = useSwipeable({
 		onSwipedUp: () => handleSwipe()

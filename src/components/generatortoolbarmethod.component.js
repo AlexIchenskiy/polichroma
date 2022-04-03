@@ -43,6 +43,7 @@ function GeneratorToolbarMethod(props) {
         elements.push(
             <Button 
                     className = 'Generator-toolbar-method-inner-element' 
+                    key       = {i}
                     text      = {active !== i}
                     flat      = {active === i}
                     bordered  = {false}

@@ -308,6 +308,7 @@ body {
 }
 
 .Generator-palette-color {
+  position: relative;
   width: auto;
   height: 100%;
   flex: 1 1 0px;
