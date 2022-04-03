@@ -9,6 +9,7 @@ export default function genColorsTetradic(n) {
     let h = genrandomnumber(0, 360);
     let s = genrandomnumber(20, 80);
     let l = genrandomnumber(40, 75);
+    let factor = 1;
 
     let chunks = breaknumintoparts(n, 4);
 
@@ -20,9 +21,10 @@ export default function genColorsTetradic(n) {
           colors.push(hslToHex(h, s, l));
         } else {
           colors.push(hslToHex(h, s, l), ...genColorShades(h, s, l, 
-                                     genrandomnumber(0, 1) ? -1 : 1, 
+                                     factor, 
                                      genrandomnumber(5, 10),
                                      chunks[i] - 1));
+          factor = factor * -1;
         }
 
         if (i % 2 === 0) {

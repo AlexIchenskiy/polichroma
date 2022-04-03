@@ -10,6 +10,8 @@ export default function genColorsTriadic(n) {
     let s = genrandomnumber(20, 80);
     let l = genrandomnumber(40, 75);
 
+    let factor = 1;
+
     let chunks = breaknumintoparts(n, 3);
     let temp = chunks[2];
     chunks[2] = chunks[1];
@@ -23,9 +25,10 @@ export default function genColorsTriadic(n) {
           colors.push(hslToHex(h, s, l));
         } else {
           colors.push(hslToHex(h, s, l), ...genColorShades(h, s, l, 
-                                     genrandomnumber(0, 1) ? -1 : 1, 
+                                     factor, 
                                      genrandomnumber(5, 10),
                                      chunks[i] - 1));
+          factor = factor * -1;
         }
 
         let isSLSame = genrandomnumber(0, 1);
