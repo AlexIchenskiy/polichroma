@@ -33,7 +33,26 @@ function GeneratorToolbarMethod(props) {
 
     useEffect(() => {
         props.setGenMethod(active);
-    }, [active])
+    }, [active]);
+
+    let elements = [];
+    let methods  = ['Analogous', 'Monochromatic', 'Complementary', 'Split-Complementary',
+                    'Square', 'Tetradic', 'Triadic', 'Random'];
+
+    for (let i = 0; i < methods.length; i++) {
+        elements.push(
+            <Button 
+                    className = 'Generator-toolbar-method-inner-element' 
+                    text      = {active !== i}
+                    flat      = {active === i}
+                    bordered  = {false}
+                    color     = {active === i ? colorHsl : 'initial'}
+                    onClick   = {() => {setActive(i);setOpened(false)}}
+                >
+                    <h3>{methods[i]}</h3>
+                </Button>
+        )
+    }
 
     return (
         <div 
@@ -50,78 +69,7 @@ function GeneratorToolbarMethod(props) {
                 className={opened ? 'Generator-toolbar-method-inner opened' : 'Generator-toolbar-method-inner closed'}
                 flat bordered 
             >
-                <Button 
-                    className='Generator-toolbar-method-inner-element' 
-                    text={active !== 0}
-                    flat={active === 0}
-                    bordered={false}
-                    onClick={() => {setActive(0);setOpened(false)}}
-                >
-                    <h3>Analogous</h3>
-                </Button>
-                <Button 
-                    className='Generator-toolbar-method-inner-element' 
-                    text={active !== 1}
-                    flat={active === 1}
-                    bordered={false}
-                    onClick={() => {setActive(1);setOpened(false)}}
-                >
-                    <h3>Monochromatic</h3>
-                </Button>
-                <Button 
-                    className='Generator-toolbar-method-inner-element' 
-                    text={active !== 2}
-                    flat={active === 2}
-                    bordered={false}
-                    onClick={() => {setActive(2);setOpened(false)}}
-                >
-                    <h3>Complementary</h3>
-                </Button>
-                <Button 
-                    className='Generator-toolbar-method-inner-element' 
-                    text={active !== 3}
-                    flat={active === 3}
-                    bordered={false}
-                    onClick={() => {setActive(3);setOpened(false)}}
-                >
-                    <h3>Split-Complementary</h3>
-                </Button>
-                <Button 
-                    className='Generator-toolbar-method-inner-element' 
-                    text={active !== 4}
-                    flat={active === 4}
-                    bordered={false}
-                    onClick={() => {setActive(4);setOpened(false)}}
-                >
-                    <h3>Square</h3>
-                </Button>
-                <Button 
-                    className='Generator-toolbar-method-inner-element' 
-                    text={active !== 5}
-                    flat={active === 5}
-                    bordered={false}
-                    onClick={() => {setActive(5);setOpened(false)}}
-                >
-                    <h3>Tetradic</h3>
-                </Button>
-                <Button 
-                    className='Generator-toolbar-method-inner-element' 
-                    text={active !== 6}
-                    flat={active === 6}
-                    bordered={false}
-                    onClick={() => {setActive(6);setOpened(false)}}
-                >
-                    <h3>Triadic</h3>
-                </Button>
-                <Button 
-                    className='Generator-toolbar-method-inner-element' 
-                    text={active !== 7}
-                    flat={active === 7}
-                    bordered={false}
-                    onClick={() => {setActive(7);setOpened(false)}}
-                >
-                    <h3>Random</h3>
-                </Button>
+                {elements}
             </Card>
         </div>
     );

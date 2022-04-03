@@ -1,3 +1,6 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700;900&display=swap');
+
 * {
   transition: all 0.3s;
 }
@@ -14,6 +17,7 @@ html, body, #root {
 
 body {
   height: auto; 
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*Main page styles*/
@@ -90,18 +94,17 @@ body {
 
 .App-body-title {
   width: 80%;
-  font-size: 46px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 44px;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .App-body-subtitle {
   width: 60%;
   color: #5F5F5F;
   font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-weight: 400;
   margin-bottom: 50px;
@@ -209,7 +212,6 @@ body {
   width: 40%;
   color: #5F5F5F;
   font-size: 20px;
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
@@ -268,7 +270,6 @@ body {
   align-items: center;
   text-align: center;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
 }
 
 .Generator-toolbar-method:hover {
@@ -317,7 +318,6 @@ body {
 }
 
 .Generator-palette-toolset {
-  font-family: 'Roboto', sans-serif;
   color: white;
   display: flex;
   flex-direction: column;
@@ -474,6 +474,7 @@ body {
     height: auto;
     padding: 30px;
     flex: 1 1 0px;
+    font-size: 12px;
   }
 
   .Generator-palette-toolset {
