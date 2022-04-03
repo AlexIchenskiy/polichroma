@@ -107,6 +107,7 @@ function GeneratorPalette(props) {
 			);
 		}
 
+		props.setGenColors(colors);
 		setElements(elements);
 	}, [colors, colorNumber]);
 

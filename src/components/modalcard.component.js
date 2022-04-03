@@ -12,9 +12,9 @@ function ModalCard(props) {
   }, [props.visible]);
 
   return (
-    <Card style={props.visible ? {transform: 'scale(0)'} : {transform: 'scale(1)'}} flat >
+    <div className='Modal-card' style={props.visible ? {transform: 'scale(1)'} : {transform: 'scale(0)'}} >
       {props.children}
-    </Card>
+    </div>
   );
 }
 

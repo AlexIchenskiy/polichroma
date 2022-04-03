@@ -14,6 +14,7 @@ function Generator(props) {
 	const [genMethod, setGenMethod]     = useState(0);
 	const [colors, setColors]           = useState([]);
 	const [colorNumber, setColorNumber] = useState(5);
+	const [genColors, setGenColors]     = useState([]);
 	const location                      = useLocation();
 
 	let colorsarr      = [];
@@ -49,12 +50,13 @@ function Generator(props) {
 	return (
 		<Card className='Generator' elevation={2}>
 			<AppHeader color={props.color} />
-			<GeneratorToolbar color={props.color} setGenMethod={(e) => setGenMethod(e)} />
+			<GeneratorToolbar color={props.color} colors={genColors} setGenMethod={(e) => setGenMethod(e)} />
 			<GeneratorPalette 
 				key={genMethod} 
 				genMethod={genMethod} 
 				colorsarr={colors}
 				colornumber={colorNumber}
+				setGenColors={(colors) => setGenColors(colors)}
 			/>
 		</Card>
 	);
