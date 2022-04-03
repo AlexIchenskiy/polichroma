@@ -31,6 +31,13 @@ export default function genColorsTetradic(n) {
           h += 150;
         }
 
+        let isSLSame = genrandomnumber(0, 1);
+        
+        if (!isSLSame) {
+          s = genrandomnumber(20, 80);
+          l = genrandomnumber(20, 80);
+        }
+
         if (h > 360) {
           h -= 360;
         }

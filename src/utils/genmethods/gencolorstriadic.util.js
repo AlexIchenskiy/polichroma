@@ -28,6 +28,13 @@ export default function genColorsTriadic(n) {
                                      chunks[i] - 1));
         }
 
+        let isSLSame = genrandomnumber(0, 1);
+        
+        if (!isSLSame) {
+          s = genrandomnumber(20, 80);
+          l = genrandomnumber(20, 80);
+        }
+
         h += 120;
 
         if (h > 360) {

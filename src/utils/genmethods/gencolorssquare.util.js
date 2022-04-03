@@ -7,8 +7,8 @@ export default function genColorsSquare(n) {
     let colors = [];
 
     let h = genrandomnumber(0, 360);
-    let s = genrandomnumber(20, 80);
-    let l = genrandomnumber(40, 75);
+    let s = genrandomnumber(5, 95);
+    let l = genrandomnumber(5, 95);
 
     let chunks = breaknumintoparts(n, 4);
 
@@ -23,6 +23,13 @@ export default function genColorsSquare(n) {
                                      genrandomnumber(0, 1) ? -1 : 1, 
                                      genrandomnumber(5, 10),
                                      chunks[i] - 1));
+        }
+
+        let isSLSame = genrandomnumber(0, 1);
+        
+        if (!isSLSame) {
+          s = genrandomnumber(20, 80);
+          l = genrandomnumber(20, 80);
         }
 
         h+= 90;

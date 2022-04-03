@@ -18,6 +18,7 @@ export default function genColorsComplementary(n) {
             if (i === after) {
                 factor = -1;
                 l = genrandomnumber(10 + n * amount, 100);
+                s = genrandomnumber(10, 90);
 
                 h += 180;
                 if (h > 360) {

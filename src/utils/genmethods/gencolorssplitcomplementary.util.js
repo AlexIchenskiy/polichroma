@@ -28,6 +28,13 @@ export default function genColorsSplitComplementary(n) {
                                      chunks[i] - 1));
         }
 
+        let isSLSame = genrandomnumber(0, 1);
+        
+        if (!isSLSame) {
+          s = genrandomnumber(20, 80);
+          l = genrandomnumber(20, 80);
+        }
+
         if (i < 1) {
           h += 135;
           if (h > 360) {
