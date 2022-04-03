@@ -12,7 +12,7 @@ function ModalCard(props) {
   }, [props.visible]);
 
   return (
-    <div className='Modal-card' style={props.visible ? {transform: 'scale(1)'} : {transform: 'scale(0)'}} >
+    <div className='Modal-card' style={props.visible ? {opacity: 1} : {opacity: 0, visibility: 'hidden'}} >
       {props.children}
     </div>
   );
