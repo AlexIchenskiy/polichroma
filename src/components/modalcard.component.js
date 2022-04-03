@@ -12,7 +12,7 @@ function ModalCard(props) {
   }, [props.visible]);
 
   return (
-    <Card className={props.visible ? 'Modal-nav Modal-nav-opened' : 'Modal-nav Modal-nav-closed'} flat >
+    <Card style={props.visible ? {transform: 'scale(0)'} : {transform: 'scale(1)'}} flat >
       {props.children}
     </Card>
   );
