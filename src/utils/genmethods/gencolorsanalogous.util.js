@@ -8,6 +8,8 @@ export default function genColorsAnalogous(n) {
     let s = genrandomnumber(35, 65);
     let l = genrandomnumber(40, 75);
 
+    let factor = genrandomnumber(0, 1);
+
     while(true) {
         colors = []
         while (colors.length !== n) {
@@ -15,13 +17,12 @@ export default function genColorsAnalogous(n) {
                 colors.push(hslToHex(h, s, l));
             }
 
-            let factorS = genrandomnumber(0, 1) ? -1 : 1;
-            let factorL = genrandomnumber(0, 1) ? -1 : 1;
-            let amount = genrandomnumber(0, 7);
+            if (factor === 1) {
+                s = genrandomnumber(35, 65);
+                l = genrandomnumber(40, 75);
+            }
             
-            h += genrandomnumber(20, 60);
-            s += factorS * amount;
-            l += factorL * amount;
+            h += genrandomnumber(15, 50);
 
             if (h > 360) {
                 h -= 360;
