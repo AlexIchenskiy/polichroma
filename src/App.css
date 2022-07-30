@@ -242,8 +242,8 @@ body {
 
 .Generator-toolbar-export-modal-close-outer {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   top: 5px;
   right: 5px;
   cursor: pointer;
@@ -256,11 +256,11 @@ body {
 }
 
 .Generator-toolbar-export-modal-close-outer-line:first-child {
-  transform: rotate(45deg) translateY(15px) translateX(15px);
+  transform: rotate(45deg) translateY(9px) translateX(9px);
 }
 
 .Generator-toolbar-export-modal-close-outer-line:last-child {
-  transform: rotate(-45deg) translateY(15px) translateX(-15px);
+  transform: rotate(-45deg) translateY(9px) translateX(-9px);
 }
 
 .Generator-toolbar-export-modal-inner-link {
