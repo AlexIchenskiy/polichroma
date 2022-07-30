@@ -5,21 +5,14 @@ export default function genColorsAnalogous(n) {
     let colors = [];
 
     let h = genrandomnumber(0, 360);
-    let s = genrandomnumber(35, 65);
-    let l = genrandomnumber(40, 75);
-
-    let factor = genrandomnumber(0, 1);
+    let s = genrandomnumber(35, 75);
+    let l = genrandomnumber(35, 75);
 
     while(true) {
         colors = []
         while (colors.length !== n) {
             if (!(hslToHex(h, s, l) in colors)) {
                 colors.push(hslToHex(h, s, l));
-            }
-
-            if (factor === 1) {
-                s = genrandomnumber(35, 65);
-                l = genrandomnumber(40, 75);
             }
             
             h += genrandomnumber(15, 50);

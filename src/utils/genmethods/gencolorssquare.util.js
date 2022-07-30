@@ -7,8 +7,8 @@ export default function genColorsSquare(n) {
     let colors = [];
 
     let h = genrandomnumber(0, 360);
-    let s = genrandomnumber(5, 95);
-    let l = genrandomnumber(5, 95);
+    let s = genrandomnumber(20, 80);
+    let l = genrandomnumber(20, 80);
 
     let chunks = breaknumintoparts(n, 4);
 
