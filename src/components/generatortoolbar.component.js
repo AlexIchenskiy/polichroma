@@ -67,8 +67,6 @@ function GeneratorToolbar(props) {
 						<div><h4>Copy link</h4></div>
 					</Button>
 					<div className='Generator-toolbar-export-modal-close-outer' onClick={() => setExportOpened(0)}>
-						<div className='Generator-toolbar-export-modal-close-outer-line'></div>
-						<div className='Generator-toolbar-export-modal-close-outer-line'></div>
 					</div>
 				</Card>
 			</ModalCard>

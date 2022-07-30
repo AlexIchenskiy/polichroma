@@ -242,25 +242,32 @@ body {
 
 .Generator-toolbar-export-modal-close-outer {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 32px;
+  height: 32px;
   top: 5px;
   right: 5px;
   cursor: pointer;
 }
 
-.Generator-toolbar-export-modal-close-outer-line {
-  width: 25px;
-  height: 1px;
+.Generator-toolbar-export-modal-close-outer:hover {
+  transform: rotate(90deg);
+}
+
+.Generator-toolbar-export-modal-close-outer::after, .Generator-toolbar-export-modal-close-outer::before {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 1px;
   background-color: black;
 }
 
-.Generator-toolbar-export-modal-close-outer-line:first-child {
-  transform: rotate(45deg) translateY(9px) translateX(9px);
+.Generator-toolbar-export-modal-close-outer::after {
+  transform: rotate(-45deg);
 }
 
-.Generator-toolbar-export-modal-close-outer-line:last-child {
-  transform: rotate(-45deg) translateY(9px) translateX(-9px);
+.Generator-toolbar-export-modal-close-outer::before {
+  transform: rotate(45deg);
 }
 
 .Generator-toolbar-export-modal-inner-link {
