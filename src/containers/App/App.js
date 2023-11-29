@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import consoleLogColors from "../../utilities/consoleLogColors.util";
 
 import Home from "../Home/Home";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Generator from "../Generator/Generator";
 
 function App() {
@@ -58,13 +58,13 @@ function App() {
     });
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route exact path="/" element={<Navigate to="/home" />} />
                 <Route exact path="/home" element={<Home themeColor={themeColor} color={color} />} />
                 <Route exact path="/generator" element={<Generator themeColor={themeColor} color={color} />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
