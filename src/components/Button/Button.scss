@@ -1,0 +1,90 @@
+@import '../../styles/variables';
+
+button.button-outlined {
+    width: auto;
+    height: auto;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transform-origin: left;
+    transition: all 0.3s ease, color 0s, box-shadow 0s;
+
+    b {
+        opacity: 0.6;
+        transition: all 0.3s ease;
+    }
+
+    span.button-arrow {
+        width: 6px;
+        height: 6px;
+        margin-left: 8px;
+        margin-right: 12px;
+        display: inline-block;
+        opacity: 0.6;
+        border-right: 2px solid;
+        border-bottom: 2px solid;
+        border-color: white;
+        position: relative;
+        transform: rotate(-45deg);
+        transition: all 0.3s ease;
+    }
+
+    span.button-arrow::before {
+        width: 1px;
+        height: 2px;
+        opacity: 0.6;
+        position: absolute;
+        transform-origin: bottom right;
+        right: 0;
+        bottom: -1.5px;
+        background-color: white;
+        transform: rotate(45deg);
+        content: "";
+        transition: all 0.3s ease;
+    }
+}
+
+button.button-outlined:hover {
+    background-position: 0 100%;
+    transform: scaleX(1.02);
+    
+    b {
+        opacity: 1;
+    }
+
+    span.button-arrow {
+        opacity: 1;
+        transform: translate3d(6px, 0, 0) rotate(-45deg);
+    }
+
+    span.button-arrow::before {
+        width: 8px;
+        opacity: 1;
+    }
+}
+
+button.button-outlined:active {
+    transform: scale(1.04);
+    transform-origin: left center;
+}
+
+button.button-outlined-dark:hover {
+    color: $dark-bg;
+
+    span.button-arrow {
+        border-color: $dark-bg;
+    }
+
+    span.button-arrow::before {
+        background-color: $dark-bg;
+    }
+}

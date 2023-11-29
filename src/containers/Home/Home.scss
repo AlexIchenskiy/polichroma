@@ -1,0 +1,110 @@
+@import "../../styles/variables";
+@import "../../styles/animations";
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: $light-text;
+    text-decoration: none;
+
+    div.header-image {
+        height: 100vh;
+        position: relative;
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    }
+
+    div.header-text,
+    div.header-image {
+        width: 50%;
+        height: 100vh;
+        min-height: 481px;
+    }
+
+    div.header-text {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &-content {
+            min-height: 481px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 10% 8% 8% 8%;
+            text-align: left;
+
+            h1 {
+                font-size: 30px;
+                font-family: 'Poiret One', cursive;
+
+                span {
+                    transition: color 0.1s;
+                }
+            }
+
+            h2 {
+                font-size: 40px;
+
+                span.header-subtitle-outer {
+                    display: block;
+                    overflow: hidden;
+                    transition: color 0.1s;
+
+                    span.header-subtitle-inner {
+                        display: inline-block;
+                        opacity: 0;
+                        transform: translate3d(0, $slide-in-offset, 0);
+                    }
+                }
+
+                span.header-subtitle-outer:first-child {
+                    span.header-subtitle-inner {
+                        animation: slide-in 0.75s cubic-bezier(0.75, 0.25, 0.20, 0.80) 0.2s forwards;
+                    }
+                }
+
+                span.header-subtitle-outer:last-child {
+                    span.header-subtitle-inner {
+                        animation: slide-in 0.75s cubic-bezier(0.75, 0.25, 0.20, 0.80) 0.3s forwards;
+                    }
+                }
+            }
+
+            h3 {
+                max-width: 480px;
+                overflow: hidden;
+                font-size: 16px;
+                color: $medium-text;
+
+                span {
+                    display: inline-block;
+                    opacity: 0;
+                    transform: translate3d(0, $slide-in-offset, 0);
+                    animation: slide-in 1s cubic-bezier(0.35, 0.25, 0.20, 0.80) 0.75s forwards;
+                    transition: color 0.1s;
+                }
+            }
+        }
+    }
+
+    div.header-button {
+        margin-top: 25px;
+        opacity: 0;
+        transform: translate3d(0, $slide-in-offset, 0);
+        animation: slide-in 0.85s cubic-bezier(0.35, 0.25, 0.20, 0.80) 0.75s forwards;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

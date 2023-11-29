@@ -1,0 +1,32 @@
+@media only screen and (max-width: 1124px) {
+   header {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+
+      div.header-text,
+      div.header-image {
+         width: 100%;
+      }
+
+      div.header-text-content {
+         padding: 18% 10% 10% 10%;
+      }
+   }
+}
+
+@media only screen and (max-width: 676px) {
+   header {
+      div.header-text-content {
+         padding: 12%;
+
+         h2 {
+            font-size: 34px;
+         }
+
+         h3 {
+            font-size: 14px;
+         }
+      }
+   }
+}
