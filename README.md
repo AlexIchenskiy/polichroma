@@ -9,7 +9,7 @@
 Polichroma is a **vibrant color palette playground** that lets you explore endless combinations of colors using multiple generation algorithms.
 Now being rewritten in **Angular + TypeScript**, it’s evolving with exciting new features to give you even more control over your color creativity!
 
-🎨 Click [here](https://alexichenskiy.github.io/) and enjoy!
+🎨 Click [here](https://alexichenskiy.github.io/polichroma) and enjoy!
 
 <img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/f11d37e5-8d62-41c2-82d0-233b1aa92a78" />
 
